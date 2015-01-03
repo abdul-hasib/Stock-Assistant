@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/splash_settings" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="pref_hide_splash_screen"
+            android:summary="@string/pref_hide_splash_screen_summary"
+            android:title="@string/pref_hide_splash_screen" >
+        </SwitchPreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

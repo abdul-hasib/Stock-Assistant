@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aaha.stockassistant"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.aaha.stockassistant.Splash"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.Home"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.shares.TradeExisting"
+            android:label="@string/title_activity_trade"
+            android:parentActivityName=".TransactionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TransactionActivity" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.manage.Stock"
+            android:label="@string/add_stock"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.manage.Account"
+            android:label="@string/add_acount"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.util.Settings"
+            android:label="@string/action_settings"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.shares.Available"
+            android:label="@string/title_report_stocks"
+            android:parentActivityName=".TransactionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TransactionActivity" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.report.Report"
+            android:label="@string/title_activity_report"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.manage.Amount"
+            android:label="@string/title_activity_amount"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.MainActivity"
+            android:label="@string/title_activity_main"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.trend.Nifty"
+            android:label="@string/title_activity_nifty"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.trend.NetAssetValue"
+            android:label="@string/title_activity_net_asset_value" >
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.shares.MainTransaction"
+            android:label="@string/title_activity_transaction"
+            android:parentActivityName=".TransactionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TransactionActivity" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.shares.EditSubTransaction"
+            android:label="@string/edit"
+            android:parentActivityName=".TransactionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TransactionActivity" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.backup.BackupRestore"
+            android:label="@string/backup"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.TransactionActivity"
+            android:label="@string/title_activity_transaction"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.aaha.stockassistant.report.Details"
+            android:label="@string/title_activity_transaction"
+            android:parentActivityName="com.aaha.stockassistant.report.Report" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aaha.stockassistant.report.Report" />
+        </activity>
+    </application>
+
+</manifest>

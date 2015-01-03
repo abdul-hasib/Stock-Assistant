@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="enter_account">Account name</string>
+    <string name="enter_stock">Stock name</string>
+    <string name="enter_brokerage">Brokerage</string>
+    <string name="enter_intraday_brokerage">Intraday brokerage</string>
+    <string name="enter_nav">Enter NAV</string>
+
+</resources>

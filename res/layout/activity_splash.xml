@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@layout/background_activity_splash"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtbackupStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSubTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageButton
+        android:id="@+id/txtAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/logo"
+        android:contentDescription="@string/loading" />
+
+    <TextView
+        android:id="@+id/txtSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtAppTitle"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/sub_title"
+        android:textColor="#0000ff"
+        android:textSize="13sp"
+        android:textStyle="italic|normal" />
+
+    <ProgressBar
+        android:id="@+id/backupProgressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtbackupStatus"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/txtbackupStatus" />
+
+</RelativeLayout>

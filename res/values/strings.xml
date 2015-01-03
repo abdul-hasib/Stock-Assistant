@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Stocker</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="rate_stock_assistant">Rate now</string>
+    <string name="rate_remind_later">Remind later</string>
+    <string name="rate_discard">No, thanks</string>
+    <string name="rate_message">If you enjoy using Stock Assistant, please take a moment to rate this app. It won\'t take more than a minute.\n Thank you for your support!</string>
+    <string name="title">Stock Assistant</string>
+    <string name="title_activity_trade">Trade</string>
+    <string name="title_activity_add_entity">Add</string>
+    <string name="title_activity_amount">Amount</string>
+    <string name="Add">Add</string>
+    <string name="Deposit">Deposit</string>
+    <string name="Withdraw">Withdraw</string>
+    <string name="intraday">Intraday</string>
+    <string name="price">Price</string>
+    <string name="type">Type</string>
+    <string name="volume">Volume</string>
+    <string name="broker">Brokerage</string>
+    <string name="add_acount">Add Account</string>
+    <string name="add_stock">Add Stock</string>
+    <string name="buy_shares">Buy Shares</string>
+    <string name="buy_back">Buy Back</string>
+    <string name="sell_shares">Sell Shares</string>
+    <string name="holdings">Holdings</string>
+    <string name="stock_details">Report</string>
+    <string name="trend">Trend</string>
+    <string name="accounts">Accounts</string>
+    <string name="amount_details">Amount</string>
+    <string name="sell">Sell</string>
+    <string name="buy">Buy</string>
+    <string name="account">Account</string>
+    <string name="stock">Stock</string>
+    <string name="brokerage">Brokerage</string>
+    <string name="date">Date</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="update">Update</string>
+    <string name="rename">Rename</string>
+    <string name="shares">Shares</string>
+    <string name="sort">Sort</string>
+    <string name="select_account_name">Select Account Name</string>
+    <string name="backup_file">StockAssistant.xml</string>
+    <string name="backup">Backup</string>
+    <string name="restore">Restore</string>
+    <string name="export_note">Note: exported backup file will be saved directly under SD card</string>
+    <string name="import_note">Note: specify only the file name. file should exist directly under sdcard.</string>
+    <string name="title_activity_report">Report</string>
+    <string name="title_report_stocks">Stocks</string>
+    <string name="title_report_cash">Cash</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_account_management">AccountManagement</string>
+    <string name="title_activity_nifty">Nifty</string>
+    <string name="title_activity_net_asset_value">NetAssetValue</string>
+    <string name="title_activity_add">Add</string>
+    <string name="short_shares">Short</string>
+    <string name="title_activity_transaction">Transaction</string>
+    <string name="transact">Transact</string>
+    <string name="loading">loading…</string>
+    <string name="sub_title">Manage stocks or forget even your Socks</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>

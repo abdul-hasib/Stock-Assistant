@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@layout/background_activity"
+    tools:context=".Home" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnTransact"
+            style="@style/MyButton"
+            android:onClick="startTransactSharesActivity"
+            android:text="@string/transact" />
+
+        <LinearLayout
+            android:id="@+id/transactionOptionsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btnShortShares"
+                style="@style/CircularButton"
+                android:background="@drawable/shortshares"
+                android:onClick="startShortSharesActivity" />
+
+            <Button
+                android:id="@+id/btnBuyBackShares"
+                style="@style/CircularButton"
+                android:background="@drawable/buyback"
+                android:onClick="startBuyBackActivity" />
+
+            <Button
+                android:id="@+id/btnBuyShares"
+                style="@style/CircularButton"
+                android:background="@drawable/buy"
+                android:onClick="startBuySharesActivity" />
+
+            <Button
+                android:id="@+id/btnSellShares"
+                style="@style/CircularButton"
+                android:background="@drawable/sell"
+                android:onClick="startSellSharesActivity" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/amountDetails"
+            style="@style/MyButton"
+            android:onClick="startAmountActivity"
+            android:text="@string/amount_details" />
+
+        <Button
+            android:id="@+id/stockReport"
+            style="@style/MyButton"
+            android:onClick="startReportActivity"
+            android:text="@string/holdings" />
+
+        <Button
+            android:id="@+id/stockNifty"
+            style="@style/MyButton"
+            android:onClick="startNiftyActivity"
+            android:text="@string/trend" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" >
+
+            <TextView
+                android:id="@+id/tvCash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startAmountActivity"
+                android:text="@string/lable_total_cash"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCashValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startAmountActivity"
+                android:text="@string/amount_details"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutStock2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/tvStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startAmountActivity"
+                android:text="@string/lable_total_stock"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStockValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startAmountActivity"
+                android:text="@string/amount_details"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutStock3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startAmountActivity"
+                android:text="@string/lable_total"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startAmountActivity"
+                android:text="@string/amount_details"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:contentDescription="@string/loading"
+        android:src="@drawable/logo" />
+
+</RelativeLayout>

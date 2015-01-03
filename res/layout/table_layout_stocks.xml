@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <!-- stock name -->
+
+    <TextView
+        android:id="@+id/item_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/item_buy_price"
+        android:text="@string/account"
+        android:textColor="#040404"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Rightend price -->
+
+    <TextView
+        android:id="@+id/item_buy_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/item_stock"
+        android:layout_toLeftOf="@+id/item_shares"
+        android:gravity="left"
+        android:text="@string/price"
+        android:textColor="#10bcc9"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Numver Shares -->
+
+    <TextView
+        android:id="@+id/item_shares"
+        android:layout_width="60dip"
+        android:layout_height="40dip"
+        android:layout_alignTop="@+id/sellStock"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/sellStock"
+        android:gravity="right"
+        android:text="@string/shares"
+        android:textSize="20sp" />
+    <!-- Rightend Arrow -->
+
+    <ImageView
+        android:id="@+id/sellStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/sell"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:src="@android:drawable/ic_menu_send" />
+
+</RelativeLayout>

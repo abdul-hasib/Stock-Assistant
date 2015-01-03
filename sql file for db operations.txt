@@ -1,0 +1,98 @@
+SELECT t2.*, t1.* 
+FROM tbl2 t2 
+LEFT JOIN tbl1 t1 ON t2.tid=t1.id
+
+=====================================
+Get avaiilable
+=============
+SELECT t1.act,t1.vol - IFNULL(SUM(t2.vol), 0) as vol
+FROM tbl1 t1
+LEFT JOIN tbl2 t2 ON t1.id=t2.tid
+GROUP BY t1.id
+HAVING vol <> 0 AND t1.act='a1'
+					
+=========================================
+Get total cash value
+=============
+SELECT act, amt FROM tbl1 where act='a1'
+ UNION ALL
+SELECT (Select act from tbl1 where tid=tbl1.id and tbl1.act='a1'), amt FROM tbl2
+ UNION ALL
+SELECT act, amt FROM tbl3 where act='a1'
+
+=========================================
+Get value from all tables - getStocksValue
+=============
+select 
+t1.id,
+account,stock,
+IFNULL((t1.price * t1.vol),0) - IFNULL(Sum(t2.price * t2.vol),0) cost
+from 
+tbl1 t1 left join 
+tbl2 t2 on t1.id=t2.tid
+
+group by t1.id
+
+=========================================
+Get amounts from all tables
+=============
+select amt from tbl1 where act='a1'
+union all
+select amt from tbl2 where tid in (select id from tbl1 group by act having act='a1')
+union all
+select amt from tbl3 where act='a1'
+
+=====================================
+Get total cash from all tables
+=============
+
+
+
+=====================================
+Others
+=============
+select account, stock, (t1.price * t1.vol) - Sum(t2.price * t2.vol)
+From tbl2 t2, tbl1 t1
+where t1.id in (select t2.tid from tbl2)
+group by t1.id
+
+
+select t1.id, account, stock, (t1.price * t1.vol) - Sum(t2.price * t2.vol) cost
+From tbl2 t2, tbl1 t1
+where t1.id in (select t2.tid from tbl2)
+group by t1.id
+
+
+select 
+t1.id,
+account,stock,
+(t1.price * t1.vol) - Sum(t2.price * t2.vol) cost
+
+from 
+tbl1 t1 inner join 
+tbl2 t2 on t1.id=t2.tid
+group by t1.id
+
+
+select 
+t1.id,
+account,stock,
+IFNULL((t1.price * t1.vol),0) - IFNULL(Sum(t2.price * t2.vol),0) cost,
+@runTotal:=@runTotal+(t1.price * t1.vol) - Sum(t2.price * t2.vol) runTotal
+from 
+tbl1 t1 
+join tbl2 t2 on t1.id=t2.tid
+JOIN (SELECT @runTotal:= 0) r;
+group by t1.id
+
+
+select 
+t1.id,
+t1.act,stk,
+IFNULL(t1.amt,0) + IFNULL(Sum(t2.amt),0) + IFNULL(t3.amt,0) cost
+from 
+tbl1 t1 
+left join tbl2 t2 on t1.id=t2.tid
+left join tbl3 t3 on t1.act=t3.act
+
+group by t1.id

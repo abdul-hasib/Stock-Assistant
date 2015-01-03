@@ -1,0 +1,110 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@layout/background_activity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".TradeExisting" >
+
+        <Switch
+            android:id="@+id/swtIntraday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/intraday"
+            android:textOff="No"
+            android:textOn="Yes"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnSelectDate"
+            style="@style/MyButton"
+            android:layout_below="@+id/swtIntraday"
+            android:layout_marginTop="12dp"
+            android:onClick="SetDate"
+            android:text="" />
+
+        <Spinner
+            android:id="@+id/spinnerAcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/swtIntraday"
+            android:layout_alignRight="@+id/swtIntraday"
+            android:layout_below="@+id/btnSelectDate"
+            android:layout_marginTop="12dp"
+            tools:listitem="@android:layout/simple_spinner_dropdown_item" />
+
+        <Spinner
+            android:id="@+id/spinnerStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spinnerAcount"
+            android:layout_alignRight="@+id/spinnerAcount"
+            android:layout_below="@+id/spinnerAcount"
+            android:layout_marginTop="12dp"
+            tools:listitem="@android:layout/simple_spinner_dropdown_item" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            style="@style/FloatField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spinnerStock"
+            android:layout_alignRight="@+id/spinnerStock"
+            android:layout_below="@+id/spinnerStock"
+            android:layout_marginTop="12dp"
+            android:ems="3"
+            android:hint="@string/price"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/etVolume"
+            style="@style/FloatField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etPrice"
+            android:layout_alignRight="@+id/etPrice"
+            android:layout_below="@+id/etPrice"
+            android:layout_marginTop="12dp"
+            android:ems="5"
+            android:hint="@string/volume"
+            android:inputType="number"
+            android:maxLength="5"
+            android:singleLine="true" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/etBroker"
+            style="@style/FloatField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etVolume"
+            android:layout_alignRight="@+id/etVolume"
+            android:layout_below="@+id/etVolume"
+            android:layout_marginTop="12dp"
+            android:ems="5"
+            android:focusable="false"
+            android:hint="@string/broker"
+            android:inputType="none|numberDecimal"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btnAddTransaction"
+            style="@style/MyButton"
+            android:layout_below="@+id/etBroker"
+            android:onClick="addTransaction"
+            android:text="@string/Add" />
+    </RelativeLayout>
+
+</ScrollView>

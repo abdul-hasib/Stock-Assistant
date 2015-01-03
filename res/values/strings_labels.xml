@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="lable_total_cash">Cash: </string>
+    <string name="lable_total_stock">Stock: </string>
+    <string name="lable_total">Total: </string>
+
+</resources>
